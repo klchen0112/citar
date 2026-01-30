@@ -77,8 +77,7 @@ HIDE-ELIDED and ELLIPSIS."
 ;;; Internal implementation functions
 
 
-(cl-defsubst citar-format--string (string
-                                   &key width text-properties hide-elided ellipsis)
+(defun-inline citar-format--string (string &rest rest &key width text-properties hide-elided ellipsis)
   "Truncate STRING to WIDTH and apply TEXT-PROPERTIES.
 If HIDE-ELIDED is non-nil, the truncated part of STRING is
 covered by a display property that makes it invisible, instead of
